@@ -38,5 +38,11 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  
+
+  ##get   'payment',  to: 'users#payment'
+  post  'payment',  to: 'users#payment'
+  post  'pay',  to: 'users#pay'
+
+  get 	'kingaku',   to: 'users#kingaku'
+
 end

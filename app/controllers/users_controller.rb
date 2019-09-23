@@ -59,6 +59,28 @@ class UsersController < ApplicationController
     
   end
 
+  def pay
+    #Payjp.api_key = 'Payjp の画面から取得した秘密鍵'
+    Payjp.api_key =ENV.fetch("PAYJP_SK")
+    Payjp::Charge.create(
+    amount: params[:amount], # 決済する値段
+    card: params['payjp-token'],
+    currency: 'jpy'
+  )
+  end
+
+  def payment
+    #binding.pry
+    @amount=params[:amount]
+    @payjp_pk=ENV.fetch("PAYJP_PK")
+    ##binding.pry
+    #render :payment
+  end
+
+  def kingaku
+
+  end
+
   private
   ##def user_params
   ##  params.require(:user).permit(:username, :email)
@@ -73,3 +95,4 @@ class UsersController < ApplicationController
                                  :password, :password_confirmation)
   end
 end
+
