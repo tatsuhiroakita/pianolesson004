@@ -41,8 +41,12 @@ Rails.application.routes.draw do
 
   ##get   'payment',  to: 'users#payment'
   post  'payment',  to: 'users#payment'
+  get  'payment',  to: 'users#payment'
   post  'pay',  to: 'users#pay'
 
   get 	'kingaku',   to: 'users#kingaku'
 
+
+  post  'paymenttest',  to: 'users#paymenttest'
+  get  'paymenttest',  to: 'users#paymenttest'
 end

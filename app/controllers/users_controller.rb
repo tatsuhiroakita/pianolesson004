@@ -60,24 +60,42 @@ class UsersController < ApplicationController
   end
 
   def pay
+    # cookieから金額を読み込んで金額ammount:に入れる
     #Payjp.api_key = 'Payjp の画面から取得した秘密鍵'
+    ##binding.pry
     Payjp.api_key =ENV.fetch("PAYJP_SK")
     Payjp::Charge.create(
-    amount: params[:amount], # 決済する値段
+    #amount: params[:amount], # 決済する値段
+    ##amount: cookies['kingaku'].to_i,
+    amount: params[:amount].to_i,
     card: params['payjp-token'],
     currency: 'jpy'
-  )
+    )
+    redirect_to :usergamen
   end
 
   def payment
+    
     #binding.pry
     @amount=params[:amount]
     @payjp_pk=ENV.fetch("PAYJP_PK")
     ##binding.pry
-    #render :payment
+    ##render :payment
   end
 
+  def paymenttest
+    
+    #binding.pry
+    @amount=params[:amount]
+    @payjp_pk=ENV.fetch("PAYJP_PK")
+    ##binding.pry
+    ##render :payment
+  end
+
+
+
   def kingaku
+    ###render :payment
 
   end
 

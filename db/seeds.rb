@@ -23,6 +23,14 @@
 #PinanoHistory.create(name: '３〜５年', created_at: '2011-11-14', updated_at:  '2011-11-14')
 #PinanoHistory.create(name: '５年以上', created_at: '2011-11-14', updated_at:  '2011-11-14')
 
-LevelKakutei.create(name: '初級', created_at: '2011-11-14', updated_at:  '2011-11-14')
-LevelKakutei.create(name: '中級', created_at: '2011-11-14', updated_at:  '2011-11-14')
-LevelKakutei.create(name: '上級', created_at: '2011-11-14', updated_at:  '2011-11-14')
+##LevelKakutei.create(name: '初級', created_at: '2011-11-14', updated_at:  '2011-11-14')
+#LevelKakutei.create(name: '中級', created_at: '2011-11-14', updated_at:  '2011-11-14')
+#LevelKakutei.create(name: '上級', created_at: '2011-11-14', updated_at:  '2011-11-14')
+
+
+Kingaku.create(kingaku: '500',created_at: '2011-11-14', updated_at:  '2011-11-14')
+Kingaku.create(kingaku: '1000',created_at: '2011-11-14', updated_at:  '2011-11-14')
+Kingaku.create(kingaku: '2000',created_at: '2011-11-14', updated_at:  '2011-11-14')
+Kingaku.create(kingaku: '3000',created_at: '2011-11-14', updated_at:  '2011-11-14')
+Kingaku.create(kingaku: '4000',created_at: '2011-11-14', updated_at:  '2011-11-14')
+Kingaku.create(kingaku: '5000',created_at: '2011-11-14', updated_at:  '2011-11-14')
